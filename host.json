@@ -1,0 +1,45 @@
+{
+  "version": "2.0",
+  "logging": {
+    "logLevel": {
+      "default": "Warning",
+      "Function": "Information",
+      "Host.Aggregator": "Information",
+      "Host.Results": "Information",
+      "market_intelligence_backend": "Information"
+    },
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request",
+        "maxTelemetryItemsPerSecond": 20
+      },
+      "enableLiveMetrics": true,
+      "enableDependencyTracking": true,
+      "enablePerformanceCounters": true
+    }
+  },
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[4.*, 5.0.0)"
+  },
+  "extensions": {
+    "http": {
+      "routePrefix": "",
+      "maxOutstandingRequests": 200,
+      "maxConcurrentRequests": 100,
+      "dynamicThrottlesEnabled": true
+    }
+  },
+  "managedDependency": {
+    "enabled": false
+  },
+  "customHandler": {
+    "description": {
+      "defaultExecutablePath": "python",
+      "arguments": ["-m", "azure_functions_worker"],
+      "workingDirectory": ""
+    },
+    "enableForwardingHttpRequest": false
+  }
+}

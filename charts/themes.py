@@ -1,0 +1,25 @@
+dark_style = {
+    "base_mpl_style": "dark_background",
+    "marketcolors": {
+        "candle": {"up": "#26a69a", "down": "#ef5350"},
+        "edge": {"up": "#26a69a", "down": "#ef5350"},
+        "wick": {"up": "#26a69a", "down": "#ef5350"},
+        "ohlc": {"up": "#26a69a", "down": "#ef5350"},
+        "volume": {"up": "#26a69a", "down": "#ef5350"},
+        "vcedge": {"up": "#26a69a", "down": "#ef5350"},
+        "alpha": 0.9,
+    },
+    "gridstyle": "--",
+    "gridcolor": "#2a2e39",
+    "facecolor": "#121212",
+    "rc": {
+        "axes.grid": True,
+        "axes.edgecolor": "#2a2e39",
+        "axes.labelcolor": "#d1d4dc",
+        "xtick.color": "#d1d4dc",
+        "ytick.color": "#d1d4dc",
+        "figure.titlesize": "x-large",
+        "figure.titleweight": "semibold",
+    },
+    "basestyle": "dark_background",
+}
